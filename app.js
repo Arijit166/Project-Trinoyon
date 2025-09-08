@@ -205,7 +205,7 @@ process.on('SIGTERM', () => {
 
 // Start Server
 const PORT = process.env.PORT || 3002;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   const environment = process.env.NODE_ENV || 'development';
   if (environment === 'production') {
     console.log(`✅ Server running on port ${PORT}`);
